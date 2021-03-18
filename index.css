@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color:hsl(0, 0%, 98%);
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    grid-template-rows:repeat(2,240px);
+    grid-template-columns:repeat(3,290px);
+    margin-top: 130px;
+    grid-gap: 10px;
+    position:absolute;
+    top: 40px;
+    grid-template-areas: 
+    ".  t ." 
+    "l b r";
+}
+.container >div{
+    position: relative;
+    padding: 20px;
+    box-shadow: 10px 5px 5px #aaaaaa;
+    background-color: white;
+    border-radius: 5px;
+}
+img{
+    position:absolute;
+    bottom: 0px;
+    right: 0px;
+    padding: 20px;
+}
+.header{
+    margin: 0px auto;
+    text-align: center;
+}
+.top{
+    grid-area: t;
+    border-top: 5px solid hsl(0, 78%, 62%);    
+}
+.left{
+    bottom: 100px;
+    grid-area: l;
+    border-top: 5px solid  hsl(180, 62%, 55%);}
+.right{
+    grid-area:r;
+    bottom: 100px;
+    border-top: 5px solid hsl(212, 86%, 64%);
+}
+.bottom{
+    grid-area:b;
+    border-top: 5px solid  hsl(34, 97%, 64%);
+}
+.heading{
+    color:rgb(76, 78, 97) ;
+    font-weight: 600;
+    font-size: 24px;
+    white-space: nowrap;
+}
+h2{
+    font-weight: 200;
+    color:hsl(229, 6%, 66%);
+    white-space: nowrap;
+
+}
+h3{
+    color: hsl(234, 12%, 34%);
+}
+p{
+    color:hsl(229, 6%, 66%);
+    font-weight: 200;
+}
+
+@media only screen and (max-width:900px)
+{
+    .container{
+        margin-top: 150px;
+        padding:20px;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(4,15em);
+        grid-template-areas: 
+        "l""t""b" "r";
+    }
+    .left,.right{
+        bottom:0px;
+    }
+}
